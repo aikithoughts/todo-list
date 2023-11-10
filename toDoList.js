@@ -11,11 +11,10 @@ const todayList = document.querySelector('#sortable-list');
 const addListItem = function(e) {
   e.preventDefault();
   const input = this.parentNode.querySelector('input');
-  //const text = input.value;
-  const text = `<span>${input.value}</span><a class="delete">Delete</a>`;
+  const text = input.value;
 
-  if (text.trim() !== '') {
-    const newItem = createDraggableListItem(text);
+  if (input.value !== '') {
+    const newItem = createDraggableListItem(`<span>${text}</span><a class="delete">Delete</a>`);
     todayList.appendChild(newItem);
     input.value = '';
   }
@@ -65,6 +64,7 @@ todayList.addEventListener('dragover', function (e) {
     }
   }
 });
+
 
 // Now handle what happens when we drop the list item.
 todayList.addEventListener('drop', function(e) {
