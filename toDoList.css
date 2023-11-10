@@ -1,0 +1,72 @@
+main {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+}
+
+main,
+input {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+ul,
+div {
+  padding-left: 40px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  color: white;
+}
+
+li.done span {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.delete {
+  background-color: darkred;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.add-item {
+  background-color: darkturquoise;
+  cursor: pointer;
+}
+
+.today-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.today-list li {
+  cursor: grab;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.today-list li:active {
+  cursor: grabbing;
+}
+
+.dragging {
+  border: 2px dashed #000; /* Add a dashed border to indicate dragging */
+  background-color: #f0f0f0; /* Add a background color to highlight the dragging element */
+  cursor: grab;
+}
+
